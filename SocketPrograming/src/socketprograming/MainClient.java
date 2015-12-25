@@ -10,12 +10,6 @@ import java.io.DataOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.net.Socket;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-<<<<<<< HEAD
-import static javafx.application.Platform.exit;
-=======
->>>>>>> 05892ef4672d2083278a410b325e3dc49bceb0c5
 import javax.swing.JOptionPane;
 
 /**
@@ -226,11 +220,7 @@ public class MainClient extends javax.swing.JFrame {
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         String choose;
-<<<<<<< HEAD
         Double[][] matris1,matris2,result;
-=======
-        int[][] matris1,matris2,result;
->>>>>>> 05892ef4672d2083278a410b325e3dc49bceb0c5
         ReadMatrix rm=new ReadMatrix();
         int m1i, m1j, m2i, m2j;
         m1i = Integer.parseInt(jTextPane1.getText());
@@ -253,20 +243,12 @@ public class MainClient extends javax.swing.JFrame {
                     out.writeInt(m2j);
                     for(int i = 0; i < m1i; i++) {
                          for (int j = 0; j < m1j; j++) {
-<<<<<<< HEAD
                             out.writeDouble(matris1[i][j]);
-=======
-                            out.writeInt(matris1[i][j]);
->>>>>>> 05892ef4672d2083278a410b325e3dc49bceb0c5
                         }
                     }
                     for(int i = 0; i < m2i; i++) {
                          for (int j = 0; j < m2j; j++) {
-<<<<<<< HEAD
                             out.writeDouble(matris2[i][j]);
-=======
-                            out.writeInt(matris2[i][j]);
->>>>>>> 05892ef4672d2083278a410b325e3dc49bceb0c5
                         }
                     }
                 switch (choose) {
@@ -275,12 +257,8 @@ public class MainClient extends javax.swing.JFrame {
                         out.writeInt(1);
                     }
                     else{
-<<<<<<< HEAD
                      JOptionPane.showMessageDialog(this, "Lütfen girdileri kontrol ediniz"); 
                      System.exit(0);
-=======
-                     JOptionPane.showMessageDialog(this, "Lütfen girdileri kontrol ediniz");    
->>>>>>> 05892ef4672d2083278a410b325e3dc49bceb0c5
                     }
                     break;
                                     case "Çarp":
@@ -288,12 +266,8 @@ public class MainClient extends javax.swing.JFrame {
                         out.writeInt(2);
                     }
                     else{
-<<<<<<< HEAD
                       JOptionPane.showMessageDialog(this, "Lütfen girdileri kontrol ediniz"); 
                       System.exit(0);
-=======
-                      JOptionPane.showMessageDialog(this, "Lütfen girdileri kontrol ediniz");  
->>>>>>> 05892ef4672d2083278a410b325e3dc49bceb0c5
                     }
                     break;
                     case "Çıkar":
@@ -301,28 +275,17 @@ public class MainClient extends javax.swing.JFrame {
                            out.writeInt(3);
                     }
                     else{
-<<<<<<< HEAD
                       JOptionPane.showMessageDialog(this, "Lütfen girdileri kontrol ediniz");
                       System.exit(0);
-=======
-                      JOptionPane.showMessageDialog(this, "Lütfen girdileri kontrol ediniz");  
->>>>>>> 05892ef4672d2083278a410b325e3dc49bceb0c5
                     }
                 }
                 String mystring="";
                     m1i=in.readInt();
                     m1j=in.readInt();
-<<<<<<< HEAD
                     result=new Double[m1i][m1j];
                     for (int i = 0; i < m1i; i++) {
                         for (int j = 0; j < m1j; j++) {
                             result[i][j]=in.readDouble();
-=======
-                    result=new int[m1i][m1j];
-                    for (int i = 0; i < m1i; i++) {
-                        for (int j = 0; j < m1j; j++) {
-                            result[i][j]=in.readInt();
->>>>>>> 05892ef4672d2083278a410b325e3dc49bceb0c5
                             mystring=mystring+result[i][j]+" ";
                         }
                         mystring=mystring+"\n";

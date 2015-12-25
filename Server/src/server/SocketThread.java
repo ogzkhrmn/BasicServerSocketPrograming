@@ -34,31 +34,18 @@ public class SocketThread implements Runnable {
             m1j = in.readInt();
             m2i = in.readInt();
             m2j = in.readInt();
-<<<<<<< HEAD
             Double[][] matris1 = new Double[m1i][m1j];
             Double[][] matris2 = new Double[m2i][m2j];
             Double[][] result;
             for (int i = 0; i < m1i; i++) {
                 for (int j = 0; j < m1j; j++) {
                     matris1[i][j] = in.readDouble();
-=======
-            int[][] matris1 = new int[m1i][m1j];
-            int[][] matris2 = new int[m2i][m2j];
-            int[][] result;
-            for (int i = 0; i < m1i; i++) {
-                for (int j = 0; j < m1j; j++) {
-                    matris1[i][j] = in.readInt();
->>>>>>> 05892ef4672d2083278a410b325e3dc49bceb0c5
                     System.out.println(matris1[i][j]);
                 }
             }
             for (int i = 0; i < m2i; i++) {
                 for (int j = 0; j < m2j; j++) {
-<<<<<<< HEAD
                     matris2[i][j] = in.readDouble();
-=======
-                    matris2[i][j] = in.readInt();
->>>>>>> 05892ef4672d2083278a410b325e3dc49bceb0c5
                     System.out.println(matris2[i][j]);
                 }
             }
@@ -71,11 +58,7 @@ public class SocketThread implements Runnable {
                     out.writeInt(m1j);
                     for(int i = 0; i < m1i; i++) {
                          for (int j = 0; j < m1j; j++) {
-<<<<<<< HEAD
                             out.writeDouble(result[i][j]);
-=======
-                            out.writeInt(result[i][j]);
->>>>>>> 05892ef4672d2083278a410b325e3dc49bceb0c5
                         }
                     }
                     break;
@@ -85,11 +68,8 @@ public class SocketThread implements Runnable {
                     out.writeInt(m2j);
                     for(int i = 0; i < m1i; i++) {
                          for (int j = 0; j < m2j; j++) {
-<<<<<<< HEAD
                             out.writeDouble(result[i][j]);
-=======
-                            out.writeInt(result[i][j]);
->>>>>>> 05892ef4672d2083278a410b325e3dc49bceb0c5
+
                         }
                     }
                     break;
@@ -99,11 +79,9 @@ public class SocketThread implements Runnable {
                     out.writeInt(m1j);
                     for(int i = 0; i < m1i; i++) {
                          for (int j = 0; j < m1j; j++) {
-<<<<<<< HEAD
+
                             out.writeDouble(result[i][j]);
-=======
-                            out.writeInt(result[i][j]);
->>>>>>> 05892ef4672d2083278a410b325e3dc49bceb0c5
+
                         }
                     }
                     break;
